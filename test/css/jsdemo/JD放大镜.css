@@ -1,0 +1,40 @@
+.imgdiv {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 100px;
+    height: 210px;
+    width: 210px;
+}
+
+.left-img {
+    left: 5px;
+    top: 5px;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #ccc;
+
+}
+
+.mask {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ccc;
+    background-color: bisque;
+    opacity: .5;
+    display: none;
+    cursor: move;
+}
+
+.big-img {
+    position: relative;
+
+    width: 400px;
+    height: 400px;
+    margin-left: 400px;
+    display: none;
+    overflow: hidden;
+}

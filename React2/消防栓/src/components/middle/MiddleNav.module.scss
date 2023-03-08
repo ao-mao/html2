@@ -1,0 +1,60 @@
+// @import './../../styles/index.scss';
+.middlenav_container{
+  background: rgba(101, 132, 226, 0.1);
+  padding: 0.521vw;
+  color: $fuck;
+//   height: 100px;
+  .panel_container{
+      @include pos_wid_heig(relative);
+      .panel_title{
+        border: 1px solid rgba(25, 186, 139, 0.17);
+        @include flexAndCenter;
+        height: 4.125vw;
+        span{
+            @include pos_wid_heig(relative);
+            display: inline-block;
+            @include flexAndCenter;
+            font-size: 1.444vw;
+            color: #ffeb7b;
+            white-space: nowrap; 
+            text-overflow:ellipse;
+        }
+        // span:nth-child(1)::after{
+        //     @include pos_wid_heig(absolute,30px,2px);
+        //     content: "";
+        //     right: 0;
+        //     background-color: #3d4c85;
+        // }
+      }
+      .panel_data{
+        @include flexAndCenter;
+        height: 2.280vw;
+        >span{
+            @include pos_wid_heig;
+            @include flexAndCenter;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.042vw;
+        }
+      }
+  }
+  .panel_container::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 10px;
+    border-left: 2px solid #02a6b5;
+    border-top: 2px solid #02a6b5;
+    content: "";
+  }
+  .panel_container::after{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 10px;
+    border-right: 2px solid #02a6b5;
+    border-bottom: 2px solid #02a6b5;
+    content: "";
+  }
+}

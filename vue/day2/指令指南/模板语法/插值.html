@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bind{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!--  -->
+        <div>
+            <h1>2.1.1.1、text</h1>
+            <p>{{message}}</p>
+            <!-- v-text 也可以执行文本插值 -->
+            <p v-text="message"></p>
+
+            <h1>v-once </h1>
+            <button @click="add">a+1</button><br>
+            <span v-once>有v-once这个将不会改变: {{ a }}</span><br>
+            <span>没有v-once这个将会改变: {{ a }}</span>
+
+            <h1>html</h1>
+            <!-- 双大括号会将数据解释为普通文本，而非 HTML 代码。为了输出真正的 HTML，你需要使用 v-html -->
+            <p>Using mustaches: {{ rawHtml }}</p>
+            <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+
+            <h1>attribute</h1>
+            <!-- v-bind指令用于响应更新HTML特性，将一个或多个attribute，或者一个组件prop动态绑定到表达式。可以简写为':'' -->
+            <div :id="eleId">1234</div>
+            <button v-bind:disabled="isButtonDisabled">Button</button>
+
+            <h1>expression</h1>
+            <h1>对于所有的数据绑定，Vue.js 都提供了完全的 JavaScript 表达式支持</h1>
+            <h1>!!!但是每个绑定都只能包含单个表达式</h1>
+            <h1>模板表达式都被放在沙盒中，只能访问全局变量的一个白名单，如 Math 和 Date 。</h1>
+        </div>
+    </div>
+
+    <script src="./../../js/vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello my-vue',
+                a: 1,
+                rawHtml:'<span>html</span>',
+                eleId:'bind',
+                isButtonDisabled:123
+            },
+            methods: {
+                add() {
+                    this.a++
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <todo>
+            <todo-tittle slot="todo-tittle" :title="title"></todo-tittle>
+            <todo-itmes slot="todo-items" v-for="xueke in xuekes" :item="xueke"></todo-itmes>
+        </todo>
+    </div>
+
+
+    <script src="../js/vue.min.js"></script>
+    <script>
+        Vue.component('todo', {
+            template: '<div>\
+                        <slot name="todo-tittle"></slot>\
+                            <ul>\
+                                <slot name="todo-items"></slot>\
+                            </ul>\
+                     </div>'
+
+        })
+        Vue.component('todo-tittle', {
+            props:['title'],
+            template: '<div>{{title}}</div>'
+        })
+        Vue.component('todo-itmes', {
+            props:['item'],
+            template: '<li>{{item}}</li>'
+        })
+
+        var vm = new Vue({
+            el: '#app',
+            data:{
+                title:'Vue',
+                xuekes:["java","js","vue"]
+            }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>图片测试</title>
+</head>
+
+<body>
+	<div>
+		<h4>路径</h4>
+		<div>
+			lg1：../../img/meinv.webp<br>
+			<img src="../img/meinv.webp" />
+		</div>
+		<div>
+			lg2:/Users/HTML/test/img/meinv.webp" <br>
+			<img src="/Users/HTML/test/img/meinv.webp" />
+		</div>
+	</div>
+	<div>
+		<img src="../img/meinv.webp" title="这个是美女">
+	</div>
+	<button id="back">回退</button>
+	<script>
+		back.onclick = function(){
+			// window.history.back()
+			history.go(-1)
+		}
+	</script>
+</body>
+
+</html>

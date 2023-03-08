@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .d {
+        width: 50px;
+        height: 50px;
+        background-color: aquamarine;
+    }
+</style>
+
+<body>
+    <div class="d"></div>
+    <script>
+        var div = document.querySelector('.d')
+        //初始坐标
+        var startX = 0
+        var startY = 0
+        var X = 0
+        var Y = 0
+        div.addEventListener('touchstart', function (e) {
+            startX = e.targatTouches[0].pageX
+            startY = e.targatTouches[0].pageY
+            X = this.offsetLeft
+            Y = this.offsetTop
+        })
+        div.addEventListener('touchmove',function(e){
+            var moveX = e.targatTouches[0].pageX-startX
+            var moveY = e.targatTouches[0].pageY-startY
+            div.style['margin-left'] = X + moveX
+            div.style['margin-top'] = Y + moveY
+        })
+    </script>
+</body>
+
+</html>

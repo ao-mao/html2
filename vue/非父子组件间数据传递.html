@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>非父子组件间数据传递</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <child content="lili"></child>
+        <child content="maomao"></child>
+
+    </div>
+
+    <script>
+        // bus属性作为载体，实现非父子组件中数据传递
+        Vue.prototype.bus = new Vue();
+
+        Vue.component('child', {
+            data() {
+                return {
+                    // 由于content是父组件传过来的，vue中单向数据流，子组件不能修改父组件
+                    // 所以将content拷贝到selfContent即可。
+                    selfConten:this.content
+                }
+            },
+            props:{
+                content:String
+            },
+            template:'<div @click=handleClick>{{selfConten}}</div>',
+            methods: {
+                handleClick:function(){
+                    // 向bus传递数据
+                    this.bus.$emit('change',this.selfConten);
+                    console.log(this.selfConten);
+                }
+            },
+            mounted() {
+                var this_ = this
+                this.bus.$on('change' , function(msg){
+                    // 由于this指向问题，所以需要使用this_
+                    this_.selfConten = msg
+                })
+            },
+        })
+        var vm = new Vue({
+            el:'#root'
+
+        })
+    </script>
+</body>
+</html> 

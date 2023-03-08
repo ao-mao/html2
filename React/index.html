@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		var i = 0
+		let str = prompt('请输入账号');
+        let psw = +prompt('请输入密码');
+
+		function yanzhen(str, psw, i) {
+			if (str == 1 && psw == 1,i<2) {
+				return '成功'
+			} else {
+				i++
+				if(i==2) return '失败'
+				else{
+					let str = prompt('请输入账号');
+       				let psw = +prompt('请输入密码');
+					yanzhen(str, psw, i)
+				}
+			}
+		}
+
+		// let str = prompt('请输入账号');
+        // let psw = +prompt('请输入密码');
+        
+        // if(str == 'andi' && psw == 888888){
+        //     alert('进入系统');
+        // }else{
+        //     alert('输入错误，请重新输入');
+        //     let str = prompt('请再次输入账号');
+        //    let psw = +prompt('请再次输入密码');
+        //    if(str == 'andi' && psw == 888888){
+        //     alert('输入成功，进入系统');
+        //    }else{
+        //     alert('机会用完程序结束');
+        //    }
+        // }
+	</script>
+</body>
+
+</html>

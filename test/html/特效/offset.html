@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        #father{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+            margin-left: 10px;
+            background-color: aquamarine;
+        }
+        #son{
+            
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color: pink;
+        }
+    </style>
+<body>
+    <div id="father">
+        <div id="son"></div>
+    </div>
+    <script>
+        var father = document.querySelector('#father')
+        var son = document.querySelector('#son')
+        //offsetLeft、offsetTop获取水平和垂直的距离
+        console.log(father.offsetLeft)
+        console.log(father.offsetTop)
+        //父子节点有position: relative的属性，则以父类的距离为主，否则以body为主
+        console.log(son.offsetLeft)
+        console.log(son.offsetTop);
+
+
+        //offsetHeight、offsetWidth获取目标的长度和高度
+        console.log(father.offsetHeight);
+        console.log(father.offsetWidth);
+        //offsetHeight、offsetWidth获取目标的长度和高度
+        console.log(son.offsetHeight);
+        console.log(son.offsetWidth);
+    </script>
+</body>
+</html>

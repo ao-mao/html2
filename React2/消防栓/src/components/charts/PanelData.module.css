@@ -1,0 +1,48 @@
+.data_container {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  padding: 0 4%;
+  align-items: center;
+  text-align: center;
+}
+.data_container .data_item {
+  width: 32%;
+  height: 5.167vw;
+  color: #68bbc4;
+}
+.data_container .data_item > span {
+  font-weight: bold;
+  height: 2.223vw;
+  display: block;
+  font-size: 1.385vw;
+}
+.data_container .data_item .data_warns {
+  font-weight: bold;
+  height: 2.223vw;
+  display: block;
+  line-height: 0.2vw;
+  font-size: 0.91vw;
+}
+.data_container .data_item .data_icon_container {
+  height: 2.223vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.data_container .data_item .data_icon_container .data_icon_warn {
+  background: url("./../../assests//icons/warn.png") no-repeat;
+  background-size: contain;
+  width: 2.223vw;
+}
+.data_container .data_item .data_icon_container .data_icon_sig4 {
+  background: url("./../../assests//icons/sig4.png") no-repeat;
+  background-size: contain;
+  width: 2.223vw;
+}
+.data_container .data_item > h4 {
+  font-size: 0.925vw;
+  font-weight: normal;
+  margin-top: 1vh;
+  color: #898FD7;
+}/*# sourceMappingURL=PanelData.module.css.map */

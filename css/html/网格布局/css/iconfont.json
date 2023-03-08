@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "31392109",
+      "name": "方向-右",
+      "font_class": "fangxiang-you",
+      "unicode": "e6cd",
+      "unicode_decimal": 59085
+    },
+    {
+      "icon_id": "31392111",
+      "name": "方向-左",
+      "font_class": "fangxiang-zuo",
+      "unicode": "e6ce",
+      "unicode_decimal": 59086
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="but1">传统注册事件</button>
+    <button id="but2">监听注册事件</button>
+    <button id="but3">ie9attch</button>
+</body>
+    <script>
+        
+        var buts = document.querySelectorAll("button")
+/*      //注册事件
+        //一、传统
+        buts[0].onclick=function(){
+            alert(22)
+        }
+        buts[0].onclick=function(){
+            alert(33)
+        }
+        //二、监听注册事件
+        //1、addEventListener ie9以上才支持
+        buts[1].addEventListener("click",function(){
+            alert("hello")
+        })
+        buts[1].addEventListener("click",function(){
+            alert("word")
+        })
+        // 2、 attachEvent  getElementsByTagName()
+        // buts[2].attachEvent("onclick",function(){
+        //     alert("word")
+        // })
+*/
+
+/*      //事件仅一次生效*/
+        //一、传统
+        buts[0].onclick=function(){
+            alert(22)
+        }
+        buts[0].onclick=function(){
+            alert(33)
+            buts[0].onclick=null
+        }
+        //二、监听注册事件
+        //1、addEventListener ie9以上才支持  
+        // buts[1].addEventListener("click",fn)
+        function fn(){
+            alert("hello")
+            // 注销事件removeEventListener
+            buts[1].removeEventListener('click',fn)
+        }
+        
+        buts[1].addEventListener("click",fn)
+        // 2、 attachEvent  getElementsByTagName()
+        // buts[2].attachEvent("onclick",function(){
+        //     alert("word")
+        // })
+    </script>
+</html>

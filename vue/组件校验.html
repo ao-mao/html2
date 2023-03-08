@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <child :content="{a:'aa'}" ></child>
+        <!-- content1="1111" 非props特性 不会显示在页面中，但是会在标签内显示-->
+        <child content1="bb" :age='111'></child>
+    </div>
+
+    <script>
+        Vue.component('child' ,{
+            //接受父组件传来的参数，props特性
+            props:{
+                // 1、通过对象的形式可以约束传来的参数的数据类型。当约束多个数据类型是，数据类型可以用数组的方式表示
+                content: [Number,String],
+                // 2、require 指定属性 必传，否则报错
+                age:{
+                    type:Number,
+                    require: false,
+                    default:'报错'//默认值
+                }   
+            },
+            template:'<div>{{content}}--{{age}}</div>'
+        })
+
+        var vm = new Vue({
+            el:'#root'
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- <style>
+    /*  clear: left;要对应左右浮动 both左右浮动都清理 */
+    .box1 {
+        background-color: pink;
+        width: 100px;
+        height: 100px;
+        float: left;
+    }
+    .box2 {
+        background-color: skyblue;
+        width: 110px;
+        height: 110px;
+        clear: both;
+    }
+</style>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body> -->
+
+<style>
+
+    .box1 {
+        background-color: pink;
+        width: 200px;
+        border: 1px solid black;
+    }
+    .box2 {
+        background-color: skyblue;
+        width: 100px;
+        height: 100px;
+        float: left;
+    }
+    /*clearfix内联盒子  */
+    .clearfix::after{
+        content: '111';/*文本 */
+        clear: both;
+        display: block;
+    }
+</style>    
+<body>
+   <!-- <div class="box1">
+        <div class="box2"></div>
+        <!-- 清除浮动   不建议
+        <div style="clear: both;">111</div>
+    </div> -->
+
+    <div class="box1 clearfix" >
+        <div class="box2"></div>
+        <!-- 清除浮动   不建议 -->
+    </div>
+    <!-- 
+        浮动特点：
+        1、浮动元素只会影响后面的元素
+        2、文本不会被浮动元素覆盖
+        3、具备内联盒子特性，宽度由内容决定
+        4、具备块级盒子特性，支持所有样式
+        5、容器满了之后自动换行
+     -->
+</body>
+
+</html>

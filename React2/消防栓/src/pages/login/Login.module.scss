@@ -1,0 +1,68 @@
+.login_container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #001923;
+    display: flex;
+    flex-direction: column;
+    .login_main{
+        position: relative;
+        flex: 1;
+        .logo{
+            position: absolute;
+            width: 28.638vw;
+            height: 8.913vw;
+            background: url('./../../assests//images/logo.png') no-repeat;
+            background-size: cover;
+            top: 40%;
+            left: 16%;
+        }
+        .input_container{
+            position: absolute;
+            top: 50%;
+            right:11%;
+            transform: translate(-11%,-50%);
+            width: 24.438vw;
+            height: 23.838vw;
+            background-color: #0c2941;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            >span{
+                display: inline-block;
+                line-height: 64px;
+                color: #dbdedf;
+                font-size: 23px;
+            }
+            .input1:nth-of-type(1){
+                margin-top: 40px;
+            }
+            .input1{
+                display: block;
+                width: 16.021vw;
+                height: 3.004vw;
+                margin-top: 1.281vw;
+                border-radius: 5px;
+            }
+            .btn{
+                margin-top: 1.781vw;
+                width: 16.021vw;
+                height: 2.904vw;
+                border-radius: 5px;
+                background-color: #1e904c;
+                border-color: #1e904c;
+                color: #fff;
+            }
+        }
+    }
+    .login_footer{
+        border-top: 1px solid #dbdedf;
+        height: 5.023vw;
+        >span{
+            display: inline-block;
+            color: #fff;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-left: 180px;
+        }
+    }
+}

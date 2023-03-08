@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="add">+1</button>
+        <p>{{e}}</p>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            // name:'App',
+            el: '#app',
+            data: {
+                a: 1,
+                b: 2,
+                c: 3,
+                d: 4,
+                e: 5,
+                f: {
+                    g: 6
+                }
+            },  
+            methods: {
+                add() {
+                    this.a++
+                }
+            },
+            watch: {
+                a: function (a) {
+                    console.log('a'+this.a);
+                },
+                e: [
+                    function handle1(a) {
+                        console.log("handle1"+a)
+                    },  
+                    function handle2(a) {
+                        console.log("handle2.a："+a)
+                        console.log("this.a："+this.a)
+                    },
+                    function handle3(a) {
+                        console.log("handle3"+a)
+                    }
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>

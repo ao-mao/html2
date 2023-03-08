@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <body-content>
+            <!-- 具名插槽 -->
+            <div class="header" slot="header">header</div>
+            <div class="footer" slot="footer">footer</div>
+        </body-content>
+        
+        <!-- 作用域插槽 -->
+        <child>
+            <template slot-scope="props">
+                <h1>{{props.item}}</h1>
+            </template>
+        </child>
+
+        <child>
+            <template slot-scope="props">
+                <h2>{{props.item}}</h2>
+            </template>
+        </child>
+    </div>
+
+    <script>
+        Vue.component('body-content',{
+            // <slot name='header'>默认值</slot>设置默认值
+            template:`<div>
+                        <slot name='header'>默认值</slot>
+                        <div>content</div>       
+                        <slot name='footer'></slot>
+                     </div>
+            `
+        })
+
+        // 作用域插槽
+        Vue.component('child',{
+            data:function(){
+                return{
+                    list:[1,2,3,4,5]
+                }
+            },
+            // :item=item传递数据
+            template:`<div>
+                        <slot 
+                        v-for='item of list'
+                        :item=item></slot>
+                     </div>
+            `
+        })
+        
+        var vm = new Vue({
+            el:"#root"
+        })
+    </script>
+</body>
+</html>

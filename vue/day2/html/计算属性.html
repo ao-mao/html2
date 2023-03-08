@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 导入js -->
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{message}}</p>
+        <p>nowTime1{{nowTime1()}}</p>
+        <p>nowTime2{{nowTime2}}</p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                message:'hello vue'
+            },
+            // 每次重新调用会重新计算
+            methods: {
+                nowTime1:function(){
+                    return Date.now();
+                }
+            },
+            // computed会把数据保存到缓存中，只有computed数据变了就会刷新
+            computed:{//不嫩与methods中的方法重名，否则只会调用methods中的方法
+                nowTime2:function(){
+                    this.message;
+                    return Date.now();
+                }
+            }
+        })
+    </script>
+</body>
+</html>

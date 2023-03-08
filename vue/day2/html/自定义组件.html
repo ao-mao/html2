@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 导入js -->
+    <script src="../../js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <my-com v-for="item in xueke" v-bind:qing="item" ></my-com>
+    </div>
+    <script>
+        // 自定义组件
+        Vue.component('my-com',{
+            props:['qing'],
+            template:'<li>{{qing}}</li>'
+        })
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                xueke:["java","linux","web"]
+            }
+        })
+    </script>
+</body>
+</html>

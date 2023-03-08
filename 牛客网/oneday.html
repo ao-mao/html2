@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        // prototype为对象的子对象,子对象里面有该对象的数据类型。
+                function A(x){
+                    this.x = x
+                }
+                A.prototype.x=1
+                function B(x){
+                    this.x = x
+                }
+                var y  = new A();
+                console.log(y);
+                B.prototype = new A();
+                var a  = new A(2) , b= new B(3);
+                // console.log(a);
+                console.log(a.x,b.x);
+                delete b.x
+                console.log(a.x,b);
+        */
+        /*
+                // requestAnimationFrame是异步函数，当使用var时，var是函数作用域，所以在函数中他可以一直使用（函数外也可以），所以输出的是4 4 4 4 4
+                // 当使用let时，由于let是块级作用域，所以每次循环时都会产生一个作用域，所以输出是0 1 2 3 4
+                for(let i = 0 ; i <5 ;i++){
+                    requestAnimationFrame(()=> console.log(i))
+                }   
+                console.log(i);
+                for(var i = 0 ; i <5 ;i++){
+                    requestAnimationFrame(()=> console.log(i))
+                }
+          */
+
+
+        /*
+        // 函数提升：函数提升优先级高于变量提升，且不会被同名变量声明时覆盖，
+        但是会被同名变量赋值后覆盖
+        var a = 4
+        function fn() {
+            console.log(a)
+            var a = 5
+        }
+        fn()
+
+        //例子2
+        console.log(v1);//underfind
+        var v1 = 100;
+        function foo() {
+            console.log(v1);//underfind
+            var v1 = 200;
+            console.log(v1);// 200
+        }
+        foo();
+        console.log(v1); //100
+*/
+        /*
+        //因为函数提升 高于变量提升，所以函数foo
+        
+        var foo = function (x, y) { //A
+            return x - y
+        }
+
+        function foo(x, y) { //B
+            return x + y
+        }
+        var num = foo(1, 2) 
+        console.log(num);
+        */
+
+
+
+
+    </script>
+</body>
+
+</html>

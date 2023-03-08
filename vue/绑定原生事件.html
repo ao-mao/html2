@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给组件绑定原生事件</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!-- 方法1、原生事件，在子组件里面不能直接被触发，需要子组件监听触发 -->
+        <child @click="handleClick"></child>
+        <!-- 方法2 在@click后面加上.native即可-->
+        <child2 @click.native="handleClick"></child2>
+    </div>
+    <script>
+        Vue.component('child',{
+            template:'<div @click="handleClickChild">点我</div>',
+            methods:{
+                handleClickChild:function(){
+                    alert('我是子组件');
+                    //触发父组件的click事件
+                    this.$emit('click');
+                }
+            }
+        })
+        Vue.component('child2',{
+            template:'<div>点我</div>',
+        })
+
+        var vm = new Vue({
+            el:'#root',
+            methods: {
+                handleClick:function(){
+                    alert('我是父组件，原生事件');                }
+            },
+        })
+    </script>
+</body>
+</html>

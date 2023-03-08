@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top {
+            position: relative;
+            width: 500px;
+            height: 700px;
+            border: 1px solid black;
+        }
+
+        .top-tittle {
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            margin-left: 10px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .top-list {
+            position: absolute;
+            top: 50px;
+            width: 480px;
+            height: 600px;
+            margin-left: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 5px;
+        }
+       
+        .col1 {
+            background-color: beige;
+            grid-area: 1/1/2/2;
+        }
+
+        .col2 {
+            background-color: aqua;
+            grid-area: 1/2/span 2/span 2;
+        }
+
+        .col3 {
+            background-color: beige;
+            grid-area: 2/1/2/2;
+        }
+
+        .col4 {
+            background-color: aqua;
+            grid-area: 3/1/span 1/span 2;
+        }
+
+        .col5 {
+            background-color: beige;
+            grid-area: 3/3/3/3;
+        }
+
+        .col6 {
+            background-color: aqua;
+            grid-area: 4/2/span 1/span 2;
+        }
+
+        .col7 {
+            background-color: beige;
+            grid-area: 4/1/5/2;
+        }
+
+        .list-tittle {
+            color: rgb(71, 31, 231);
+            font-weight: bolder;
+            font-size: 20px;
+            text-align: right;
+        }
+
+        .list-text {
+            color: rgb(51, 108, 4);
+            /* width: 100%; */
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .top-page {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            height: 50px;
+            line-height: 50px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .top-page div {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            margin: 0 5px;
+            border: 1px solid black;
+        }
+
+        .top-page .page-alt {
+            font-weight: bold;
+            border: 0px solid rgb(74, 115, 138);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="top-tittle">
+            <span>今日上榜</span>
+        </div>
+        <div class="top-list">
+            <div class="col1">
+                <div class="list-tittle">实时热点</div>
+                <div class="list-text">阿里第一颗新</div>
+            </div>
+            <div class="col2">
+                <div class="list-tittle">实时热点</div>
+                <div class="list-text">阿里第一颗新</div>
+            </div>
+            <div class="col3">
+                <div class="list-tittle">实时热点</div>
+                <div class="list-text">阿里第一颗新</div>
+            </div>
+            <div class="col4">
+                <div class="list-tittle">实时热点</div>
+                <div class="list-text">阿里第一颗新</div>
+            </div>
+            <div class="col5">
+                <div class="list-tittle">实时热点</div>
+                <div class="list-text">阿里第一颗新</div>
+            </div>
+            <div class="col6">
+                <div class="list-tittle">实时热点</div>
+                <div class="list-text">阿里第一颗新</div>
+            </div>
+            <div class="col7">
+                <div class="list-tittle">实时热点</div>
+                <div class="list-text">阿里第一颗新</div>
+            </div>
+
+        </div>
+        <div class="top-page">
+            <div class="page-alt">1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+</body>
+
+</html>

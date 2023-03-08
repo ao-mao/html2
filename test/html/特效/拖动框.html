@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            margin-top: 10px;
+            text-decoration: none;
+            color: black;
+            margin-left: 800px;
+            font-size: xx-large;
+        }
+
+        .loginForm {
+            margin-top: 300px;
+            margin-left: 600px;
+            width: 700px;
+            height: 300px;
+            text-align: center;
+            border: 1px solid black;
+            font-size: large;
+            display: none;
+            background-color: aliceblue;
+        }
+
+        form {
+            height: 200px;
+            width: 250px;
+            margin-left: 230px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <a class="title" href="javascript:;">点击弹出登录框</a>
+        <div class="loginForm">
+            <div class="mask" style="height:50px ;"></div>
+            <b>安全登录</b>
+            <form action="get">
+                用户名：<input class="userName"><br>
+                密码：<input class="userPassword" style="margin-left: 17px"><br>
+                <button class="login" type="submit" value="登录" style="font-size:large">登录</button>
+                <button class="forgetPS" style="font-size: large; margin-left:100px">忘记密码</button>
+            </form>
+
+        </div>
+    </div>
+    <script>
+        var a = document.querySelector(".title")
+        var login = document.querySelector(".loginForm")
+        var divclick = document.querySelector(".mask")
+        // var bd = document.querySelector("body")
+        a.addEventListener('click', function () {
+            a.style['display'] = 'none'
+            login.style['display'] = 'block'
+            // bd.style['background-color'] = 'rgb(122, 116, 125)'
+        })
+        // 获取鼠标在盒子的坐标
+        divclick.addEventListener("mousedown", function (e) {
+            var y = e.pageY - login.offsetTop
+            var x = e.pageX - login.offsetLeft
+            
+            document.addEventListener('mousemove', move)
+            function move(e) {
+                login.style['margin-left'] = e.pageX - x + 'px'
+                login.style['margin-top'] = e.pageY - y + 'px'
+            }
+            document.addEventListener('mouseup', function () {
+                document.removeEventListener("mousemove",move)
+            })
+        })
+
+
+
+    </script>
+</body>
+
+</html>

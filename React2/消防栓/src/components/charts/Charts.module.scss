@@ -1,0 +1,160 @@
+
+
+.charts_container{
+    width: 100%;
+    height: 100%;
+    // height: 16.021vw;
+    // background-color: #0696ab;
+    position: relative;
+    .panel{
+        position: relative;
+        height: 100%;
+        background: url(./../../assests/images/panel.png) rgba(255, 255, 255, 0.03);
+        text-align: center;
+        >h2{
+            padding: 0;
+            margin: 0;
+            line-height: 2.063vw;
+            font-size: 0.929vw;
+            color: #fff;
+			
+        }
+	.logo{
+		position: relative;
+		height:11rem;
+		top:50%;
+		transform: translateY(-50%);
+	}
+        // .data_container{
+        //     display: flex;
+        //     width: 100%;
+        //     flex-flow: row wrap;
+        //     padding: 0 4%;
+        //     align-items: center;
+        //     .data_item{
+        //         width: 32%;
+        //         height: 5.167vw;
+        //         color: #68bbc4;
+        //         >span{
+        //             font-weight: bold;
+        //             height: 2.223vw;
+        //             display: block;
+        //             font-size: 1.385vw;
+        //         }
+        //         .data_icon_container{
+        //             height: 2.223vw;
+        //             width: 100%;
+        //             display: flex;
+        //             justify-content: center;
+        //             // .data_icon{
+        //             //     background-size: contain;
+        //             //     display: inline-block;
+        //             //     width: 2.223vw;
+        //             //     height: 100%;
+        //             // }
+        //             .data_icon_warn{
+                        
+        //                 background: url("./../../assests//icons/warn.png") no-repeat;
+        //                 background-size: contain;
+        //                 width: 2.223vw;
+        //             }
+        //             .data_icon_sig4{
+        //                 background: url("./../../assests//icons/sig4.png") no-repeat;
+        //                 background-size: contain;
+        //                 width: 2.223vw;
+        //             }
+        //         }   
+                
+        //         >h4{
+        //             font-size: 1.185vw;
+        //             font-weight: normal;
+        //             margin: 0;
+        //             color: #898FD7;
+        //         }
+        //     }
+        // }
+        .container{
+            display: flex;
+            justify-content: center;
+            .battery_container{
+                margin-top: 1.563vw;
+                width: 9.813vw;
+                height: 9.813vw;
+                border: 3px solid white;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .battery_item{
+                    i{
+                        display: inline-block;
+                        width: 3.923vw;
+                        height: 2.163vw;
+                        background: url('./../../assests//icons/power.png') no-repeat;
+                        background-size: contain;
+                        animation: fade-in;
+                        animation-duration: 2.5s;
+                        animation-iteration-count: infinite;
+                    }
+                    span{
+                        display: block;
+                        font-weight: 600;
+                        color: white;
+                        font-size: 1.138vw;
+                    }
+                    @keyframes fade-in{
+                        0% {opacity: 0;}
+                        50% {opacity: 1;}
+                        100% {opacity: 0;}
+
+                    }
+                }
+            }
+        }
+        
+    }
+    .panel_data{
+        display: flex;
+        align-items: center;
+    }
+    .panel::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-left: 2px solid #02a6b5;
+        border-top: 2px solid #02a6b5;
+        content: "";
+    }
+    .panel::after{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid #02a6b5;
+        border-top: 2px solid #02a6b5;
+        content: "";
+    }
+}
+.charts_container::before{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #02a6b5;
+    border-bottom: 2px solid #02a6b5;
+    content: "";
+}
+.charts_container::after{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #02a6b5;
+    border-bottom: 2px solid #02a6b5;
+    content: "";
+}

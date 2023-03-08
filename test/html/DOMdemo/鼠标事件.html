@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 3000px;">
+    你不能复制我！！！
+    <script>
+        document.addEventListener('contextmenu',function(e){
+            e.preventDefault();
+        })
+        document.addEventListener('selectstart',function(e){
+            e.preventDefault();
+        })
+        document.addEventListener('click',function(e){
+            //page---鼠标在页面的x，y
+            console.log(e.pageX);
+            console.log(e.pageY);
+            //client---鼠标在浏览器的x,y
+            console.log(e.clientX);
+            console.log(e.clientY);
+            //screen---鼠标在屏幕的x，y
+            console.log(e.screenX);
+            console.log(e.screenY);
+        })
+
+    </script>
+</body>
+</html>

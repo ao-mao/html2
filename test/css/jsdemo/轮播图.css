@@ -1,0 +1,56 @@
+.imgsBody{
+    position:absolute;
+    margin-top: 100px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+button[class*="butn"]{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: 170px;
+    width: 50px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 40px;
+    text-align: center;
+    border: 0;
+    background-color: rgba(101, 96, 105, 0.6);
+}
+.lbutn{
+    margin-left: 20px;
+}
+.rbutn{
+    margin-left: 730px;
+}
+.imgs{
+
+    display: flex;
+    margin-left: 0px;
+
+}
+.img{
+    width: 800px;
+
+}
+.lis{
+    z-index: 1;
+    display: none;
+    color:  rgb(156, 156, 164);
+    margin-top: -140px;
+    margin-left: 300px;
+    font-size: 30px;
+    display : flex
+}   
+    li{
+        margin-left:10px;
+        margin-right: 10px;
+        margin-top: -10px;
+}
+.curent{
+    font-size: 30px;
+    color:  rgb(6, 149, 40);
+}

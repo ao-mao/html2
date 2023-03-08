@@ -1,0 +1,62 @@
+.main_container {
+  height: 80.25vh;
+  margin-top: 0.781vw;
+}
+.main_container .topBar_container {
+  background-color: #0b0e56;
+  height: 3.646vw;
+  display: flex;
+  align-items: center;
+}
+.main_container .topBar_container .selectBar_container {
+  padding: 0 1.802vw;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.main_container .topBar_container .selectBar_container .menu_item {
+  cursor: pointer;
+  color: #7279ca;
+  font-size: 1.138vw;
+  width: 5.908vw;
+}
+.main_container .topBar_container .selectBar_container .target {
+  position: relative;
+  color: #7528e1;
+  font-size: 1.138vw;
+  width: 5.908vw;
+}
+.main_container .topBar_container .selectBar_container .target::after {
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+  content: "";
+  height: 2px;
+  width: 5.429vw;
+  background-color: #7528e1;
+}
+.main_container .topBar_container .input_container {
+  height: 2.204vw;
+  width: 19.625vw;
+  background-color: #333536;
+  display: flex;
+  align-items: center;
+}
+.main_container .topBar_container .input_container .search_icon {
+  font-size: 1.346vw;
+  color: white;
+  margin: 0 0.581vw;
+}
+.main_container .topBar_container .input_container > input {
+  border: 0;
+  background-color: rgba(12, 23, 80, 0);
+  height: 100%;
+  width: 100%;
+}
+.main_container .topBar_container .input_container input:focus {
+  outline: none;
+}
+.main_container .serviceList_container {
+  overflow-y: scroll;
+  height: 36.042vw;
+}/*# sourceMappingURL=MiddleMain.module.css.map */

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 50px;
+            width: 50px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div')
+        //手指触摸
+        div.addEventListener('touchstart',function(e){
+            // console.log(e);
+            // console.log("touches"+e.touches);//正在触摸的所以手指列表
+            // console.log('targetTouches'+e.targetTouches);//正在触摸当前DOM元素的手指列表
+            // console.log('changedTouches'+e.changedTouches);//changedTouches 手指状态发生改变 从无到有 或者 从有到无
+        })
+        //移动手指的距离
+        div.addEventListener('touchmove',function(e){
+            // console.log(e);
+            // console.log(e.touches);
+            // console.log(e.targetTouches);
+        })
+        // 手指离开
+        div.addEventListener('touchend',function(e){
+            console.log(e);
+            // 没有touches和targetTouches对象
+        })
+    </script>
+</body>
+</html>

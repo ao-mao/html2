@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <style>
+        .menu {
+            width: 1226px;
+            height: 460px;
+            /* background-color: aqua; */
+        }
+
+        .left-menu {
+            position: relative;
+            box-sizing: border-box;
+            width: 234px;
+            height: 460px;
+            padding: 20px 0px;
+            background-color: rgba(105, 101, 101, .6);
+        }
+
+        .left-menu>li {
+            list-style: none;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        .left-menu>li>a {
+            text-decoration: none;
+            line-height: 42px;
+            font-size: 14px;
+            color: white;
+            padding: 0px 20px 0px 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-menu>li:hover {
+            background-color: orange;
+        }
+
+        .left-menu>li:hover .rigth-menu{
+            display: grid;
+        }
+
+        .rigth-menu {
+            position: absolute;
+            height: 460px;
+            top: 0px;
+            left: 234px;
+            background-color: antiquewhite;
+            display: none;
+            grid-auto-flow: column;
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: 265px;
+            grid-auto-columns: 265px;
+        }
+
+        .rigth-menu a {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .rigth-menu>a>img {
+            margin-left: 20px;
+            margin-right: 18px;
+        }
+
+        .rigth-menu>a>span {
+            position: absolute;
+            top: 15px;
+            color: black;
+            font-size: 14px;
+        }
+        .rigth-menu>a:hover{
+            color: rgb(82, 195, 54);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="left-menu">
+            <li>
+                <a href="#">
+                    <span>手机</span>
+                    <i class="iconfont icon-fangxiang-you"></i>
+                </a>
+                <div class="rigth-menu">
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    <span>手机</span>
+                    <i class="iconfont icon-fangxiang-you"></i>
+                </a>
+                <div class="rigth-menu">
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    <span>手机</span>
+                    <i class="iconfont icon-fangxiang-you"></i>
+                </a>
+                <div class="rigth-menu">
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    <span>手机</span>
+                    <i class="iconfont icon-fangxiang-you"></i>
+                </a>
+                <div class="rigth-menu">
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                    <a href="#">
+                        <img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d8aeccb0bad7f28a44aa89b2ddb51010.png?thumb=1&w=40&h=40&f=webp&q=90">
+                        <span>手机</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    <span>手机</span>
+                    <i class="iconfont icon-fangxiang-you"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>手机</span>
+                    <i class="iconfont icon-fangxiang-you"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>手机</span>
+                    <i class="iconfont icon-fangxiang-you"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>手机</span>
+                    <i class="iconfont icon-fangxiang-you"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>手机</span>
+                    <i class="iconfont icon-fangxiang-you"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>手机</span>
+                    <i class="iconfont icon-fangxiang-you"></i>
+                </a>
+            </li>
+        </div>
+    </div>
+</body>
+
+</html>

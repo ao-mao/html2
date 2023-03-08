@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello word
+    <div></div>
+    <script>
+        time = 5
+        var text = document.querySelector('div')
+        t()
+        function t(){
+            if(time === 0 ) {
+                location.href = 'https://www.bilibili.com/'
+            }
+            text.innerText = '你将在'+time+'秒内跳转'
+            time--
+        }
+        setInterval(t,1000)
+    </script>
+</body>
+</html>

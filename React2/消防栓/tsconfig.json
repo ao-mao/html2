@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "jsx":"react-jsx",
+        "noImplicitAny": false,
+        "plugins":[
+            {
+                "name":"typescript-plugin-css-modules"
+            }
+        ],
+        "esModuleInterop": true
+    }
+    
+}

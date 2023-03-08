@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin-top: 0;
+            margin-left: 0;
+        }
+        body{
+            height: 3000px;
+        }
+        .topBar{
+            height: 100px;
+            width: 100%;
+            background-color: skyblue;
+            position: fixed;
+            text-align: center;
+            font-size: 25px;
+            line-height: 100px;
+            color: aliceblue;
+            opacity:0;
+            transition: opacity .5s linear;
+        }
+        .butBar{
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+            position: fixed;
+            text-align: center;
+            top: 85%;
+            left: 90%;
+            font-size: 20px;
+            color: aliceblue;
+            line-height: 100px;
+            opacity:0;
+            transition: opacity .5s linear;
+        }
+        .butBar.ative{
+            opacity:1;
+        }
+        .topBar.ative{
+            opacity:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="topBar">
+       顶部栏
+    </div>
+    <div class="butBar">
+        返回顶部
+    </div>
+    <script src="../../js/DOM/回到顶部.js"></script>
+</body>
+</html>

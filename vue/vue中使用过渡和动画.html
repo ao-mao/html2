@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <style>
+        /* 过渡动画 */
+        .fade-enter, .fade-leave-to{
+            opacity: 0;
+        }
+        .fade-enter-active, .fade-leave-active{
+            transition:opacity 3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <!-- type="transition" 将动画的时长等于过渡时长 -->
+        <!-- :duration 定义动画的总时长 -->
+        <transition name="fade"
+        type="transition"
+        
+        appear
+        enter-active-class="animated swing fade-enter-active"
+        leave-active-class="animated shake fade-leave-active" 
+        appear-active-class="animated swing"
+        >
+            <div v-show="show">hello word</div>
+        </transition>
+
+        <button @click="handleChange">切换</button>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#root',
+            data: {
+                show: true
+            },
+            methods: {
+                handleChange: function(){
+                    this.show = !this.show
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        111111s
+        <p>{{a}}</p>
+        <span v-once>这个将不会改变: {{ a }}</span>
+    </div>
+
+    <script src="../js/vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                a: 1
+            },
+            computed: {
+                // 仅读取
+                add() {
+                    return this.a + 1
+                },
+                aplugs: {
+                    get: function () {
+                        return this.a + 1
+                    },
+                    set: function () {
+                        return this.a=this.a + 2
+                    }
+
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

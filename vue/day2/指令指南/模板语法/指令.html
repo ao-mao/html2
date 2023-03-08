@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>指令的职责是，当表达式的值改变时，将其产生的连带影响，响应式地作用于 DOM。</h1>
+
+        <h2>2.1.2.1、参数</h2>
+        <p>一些指令能够接收一个“参数”，在指令名称之后以冒号表示。</p>
+        <a :href='url'>跳转</a>
+        <p>也可以用于监听dom事件</p>
+        <span @click="handle">点我</span>
+        <h2>2.1.2.2、动态参数</h2>
+        <!-- 从 2.6.0 开始，可以用方括号括起来的 JavaScript 表达式作为一个指令的参数： -->
+        属性: <a v-bind:[attributeName]="url">aaa</a><br>
+        事件：<a v-on:[eventName]="handle"> handle me </a><br>
+        
+        动态参数的值的约束:<a :[chiak]='url'>点击</a>
+        <span style="color: red;">由于chiak属性为null，所以会被移除</span><br>
+        {<a :[chiak1]='url'>点击</a>}
+        <span style="color: red;">警告！！！ Uncaught ReferenceError: value is not defined</span><br>
+
+        <h2>2.1.3、缩写</h2>
+
+    </div>
+
+    <script src="../../js/vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                url: 'https://www.baidu.com/',
+                attributename: 'href',
+                eventname: 'click',
+                chiak: '',
+                chiak1: 111,
+                foobar:'href'
+            },
+            methods: {
+                handle() {
+                    alert('你点击了我')
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

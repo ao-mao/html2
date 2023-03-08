@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 50px;
+            height: 30px;
+        }
+
+        li {
+            width: 500px;
+            /* text-align: center; */
+            background-color: pink;
+        }
+        li a{
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <textarea style="width: 500px;height:200px"></textarea><br>
+        <button id="but">发布</button>
+        <ul>
+
+        </ul>
+    </div>
+    <script>
+        var text = document.querySelector("textarea")
+        var but = document.querySelector("button")
+     
+        //添加
+        but.onclick = function () {
+            if (text.value.length === 0) {
+                alert('输入内容为空')
+            } else {
+                //创建li
+                var textLi = document.createElement('li')
+                var ul = document.querySelector('ul')
+                // 插入li
+                ul.insertBefore(textLi, ul.children[0])
+                ul.children[0].innerHTML = text.value + '<a href=javascript:;>删除</a>'
+                text.value=''
+            }
+            var as = document.querySelectorAll("a")
+            for (i = 0; i < as.length; i++) {
+                as[i].onclick = function () {
+                    this.parentNode.remove(this.parentNode)
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

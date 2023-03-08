@@ -1,0 +1,87 @@
+.serviceItem_container{
+    position: relative;
+    color: #dfe0eb;
+    // height: 4.65vw;
+    height: 7.65vw;
+    display: flex;
+    font-size: 0.938vw;
+    padding: 1.5vw 1.302vw;
+    align-items: center;
+
+    cursor: pointer;
+    .img_container{
+        height: 100%;
+        width: 4.925vw;
+        background-color: #0b0e56;
+        // border-radius: 5px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+    .info_container{
+        height: 100%;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        .status_container{
+            margin-top: auto;
+            display: flex;
+            
+            .warn_icon_container{
+                align-items: center;
+                display: flex;
+                color: #D7A064;
+                .warn_icon{
+                    font-size: 1.302vw;
+                    margin-right: 0.181vw;
+                }
+                
+                
+            }
+            .normal_icon_container{
+                align-items: center;
+                display: flex;
+                color: #00B38A;
+                .normal_icon{
+                    font-size: 1.102vw;
+                    margin-right: 0.181vw;
+                }
+            }
+        }
+        .location_container{
+            line-height: 1.302vw;
+            margin-bottom: 0.16vw;
+        }
+        .status_title{
+            color: #898FD7;
+        }
+    }
+    >span{
+        position: absolute;
+        top: 0;
+        left: 25.438vw;
+        color: #898FD7;
+    }
+    .edit_icon{
+        margin-left: auto;
+        margin-right: 15px;
+        font-size: 1.083vw;
+    }
+        // width: 450px;
+    .input_container{
+        display: flex;
+        span{
+            color: red !important;
+        }
+    }
+    .fuck{
+        color: #00B38A;
+    }
+}
+.serviceItem_container--selected{
+    // background-color: #0b0e56;
+    background-color: rgba(11, 14, 86,0.4);
+}
